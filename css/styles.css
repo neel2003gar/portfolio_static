@@ -1,0 +1,84 @@
+/* Custom CSS Styles */
+
+/* Smooth scrolling behavior for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B82F6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4B5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+.dark ::selection {
+  background-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Custom link hover animation */
+.hover-underline-animation {
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #3B82F6;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Additional animations */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #3B82F6;
+  margin: 15px auto 0;
+}
+
+/* Form focus animation */
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
